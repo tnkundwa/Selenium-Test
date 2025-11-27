@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 0.886 s <<< FAILURE! - in TestSuite
+setUp(login.LoginTests)  Time elapsed: 0.594 s  <<< FAILURE!
+org.openqa.selenium.remote.NoSuchDriverException: 
+Unable to obtain: chromedriver, error chromedriver must exist: C:\Users\LONOVO\Desktop\Selenium\javadriver_java\javadriver_java\resources\chromedriver.exe
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25'
+Driver info: driver.version: ChromeDriver
+Caused by: java.lang.IllegalStateException: chromedriver must exist: C:\Users\LONOVO\Desktop\Selenium\javadriver_java\javadriver_java\resources\chromedriver.exe
+
