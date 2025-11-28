@@ -33,6 +33,10 @@ public class HomePage {
         clickAllLinks("Hover Demo");
         return new HoversPage(driver);
     }
+    public FileUploadPage clickFileUpload(){
+        clickAllLinks("Upload File Demo");
+        return new FileUploadPage(driver);
+    }
 
     private void clickAllLinks(String linkText){
         driver.findElement(By.linkText(linkText)).click();
