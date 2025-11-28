@@ -41,6 +41,10 @@ public class HomePage {
         clickAllLinks("Bootstrap Modals");
         return new ModelsPage(driver);
     }
+    public DynamicLoadingPage clickDynamicLoadingPage(){
+        clickAllLinks("Dynamic Data Loading");
+        return new DynamicLoadingPage(driver);
+    }
 
     private void clickAllLinks(String linkText){
         driver.findElement(By.linkText(linkText)).click();
