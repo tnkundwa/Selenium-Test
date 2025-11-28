@@ -25,6 +25,10 @@ public class HomePage {
         clickAllLinks("Key Press");
         return new KeysPressPage(driver);
     }
+    public AlertsPage clickAlertsPage(){
+        clickAllLinks("Javascript Alerts");
+        return new AlertsPage(driver);
+    }
 
     private void clickAllLinks(String linkText){
         driver.findElement(By.linkText(linkText)).click();
