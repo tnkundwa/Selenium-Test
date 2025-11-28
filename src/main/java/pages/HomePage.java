@@ -29,6 +29,10 @@ public class HomePage {
         clickAllLinks("Javascript Alerts");
         return new AlertsPage(driver);
     }
+    public HoversPage clickHoversPage(){
+        clickAllLinks("Hover Demo");
+        return new HoversPage(driver);
+    }
 
     private void clickAllLinks(String linkText){
         driver.findElement(By.linkText(linkText)).click();
