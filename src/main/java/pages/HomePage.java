@@ -21,6 +21,10 @@ public class HomePage {
         clickAllLinks("Select Dropdown List");
         return new DropdownPage(driver);
     }
+    public KeysPressPage clicKeysPress(){
+        clickAllLinks("Key Press");
+        return new KeysPressPage(driver);
+    }
 
     private void clickAllLinks(String linkText){
         driver.findElement(By.linkText(linkText)).click();
