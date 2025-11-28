@@ -12,12 +12,17 @@ public class HomePage {
     public HomePage(WebDriver driver){
         this.driver = driver;
     }
-    public LoginPage clickFormAuthentication(){
-        clickLink("Form Authentication");
-        return new LoginPage(driver);
+
+    public FormSubmitPage clickformSubmit(){
+        clickAllLinks("Ajax Form Submit");
+        return new FormSubmitPage(driver);
+    }
+    public DropdownPage clickDropdown(){
+        clickAllLinks("Select Dropdown List");
+        return new DropdownPage(driver);
     }
 
-    private void clickLink(String linkText){
+    private void clickAllLinks(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
 }

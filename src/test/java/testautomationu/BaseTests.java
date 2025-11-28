@@ -22,14 +22,14 @@ public class BaseTests {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
 
         driver = new ChromeDriver();
-        goHome();
         
-        homePage = new HomePage(driver);
+        
     }
 
     @BeforeMethod
     public void goHome(){
-        driver.get("https://the-internet.herokuapp.com/");
+        driver.get("https://www.lambdatest.com/selenium-playground/");
+        homePage = new HomePage(driver);
     }
 
     @AfterClass
