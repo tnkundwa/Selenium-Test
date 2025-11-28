@@ -37,6 +37,10 @@ public class HomePage {
         clickAllLinks("Upload File Demo");
         return new FileUploadPage(driver);
     }
+    public ModelsPage clickModelsPage(){
+        clickAllLinks("Bootstrap Modals");
+        return new ModelsPage(driver);
+    }
 
     private void clickAllLinks(String linkText){
         driver.findElement(By.linkText(linkText)).click();
