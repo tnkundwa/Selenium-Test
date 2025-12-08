@@ -12,13 +12,16 @@ public class ModelsPage {
     public ModelsPage(WebDriver driver){
         this.driver = driver;
     }
+
     public void clickButton(int index){
         WebElement allLaunchButtons = driver.findElements(launchModelButton).get(index - 1);
         allLaunchButtons.click();
     }
+
     public String getBodyText(){
         return driver.findElement(modelText).getText();
     }
+    
     public void closeModel(){
         driver.findElement(closeButton).click();
     }

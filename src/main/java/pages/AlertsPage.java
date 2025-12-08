@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class AlertsPage {
     private WebDriver driver;
-    private By clickMeButton = By.xpath(".//button[text() = 'Click Me']");
+    private By clickMeButton = By.xpath(".//button[text() = 'Click Me']"); 
     private By textField = By.id("confirm-demo");
     public AlertsPage(WebDriver driver){
         this.driver = driver;
