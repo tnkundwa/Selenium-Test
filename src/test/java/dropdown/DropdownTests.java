@@ -20,8 +20,8 @@ public class DropdownTests extends BaseTests{
         dropdownPage.clickLastSelectButton();
         assertEquals("Incorrect number of selections", 1, dropdownPage.getSelectedOptions().size());
         assertTrue("Option not selected", dropdownPage.getSelectedOptions().contains("Friday"));
-        assertEquals("Incorrect option", "Friday", dropdownPage.getSelectedOptionText());
-        assertEquals("Option selected incorrect!", "Texas", dropdownPage.getFirstOption());
-        // assertEquals("Option selected incorrect!", "Washington", dropdownPage.getLastOption());
+        assertEquals("Incorrect option", "Day selected :- Friday", dropdownPage.getSelectedOptionText());
+        assertEquals("Option selected incorrect!", "First selected option is : Texas", dropdownPage.getFirstOption());
+        assertTrue("Option selected incorrect!", dropdownPage.getLastOption().contains("Washington"));
     }
 }

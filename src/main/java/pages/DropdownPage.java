@@ -11,11 +11,11 @@ public class DropdownPage {
     WebDriver driver;
     private By dropdown = By.id("select-demo");
     private By mutliSelect = By.id("multi-select");
-    private By selectedText = By.id("select-demo");
+    private By selectedText = By.xpath(".//p[contains(text(), 'Day')]");
     private By firstSelectedButton = By.id("printMe");
     private By lastSelectedButon = By.id("printAll");
-    private By firstOption = By.className("genderbutton");
-    // private By lastOption = By.className("groupradiobutton block break-words");
+    private By firstOption = By.xpath(".//p[contains(text(), 'First')]");
+    private By lastOption = By.xpath(".//p[contains(text(), 'Last')]");
 
     public DropdownPage(WebDriver driver){
         this.driver = driver;
@@ -49,8 +49,8 @@ public class DropdownPage {
     public String getFirstOption(){
         return driver.findElement(firstOption).getText();
     }
-    // public String getLastOption(){
-    //     return driver.findElement(lastOption).getText();
-    // }
+    public String getLastOption(){
+        return driver.findElement(lastOption).getText();
+    }
 
 }

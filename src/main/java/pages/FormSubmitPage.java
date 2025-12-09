@@ -28,5 +28,6 @@ public class FormSubmitPage {
     public String getConfirmText(){
         return driver.findElement(confirmText).getText();
     }
+    
 
 }
