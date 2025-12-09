@@ -22,6 +22,5 @@ public class DropdownTests extends BaseTests{
         assertTrue("Option not selected", dropdownPage.getSelectedOptions().contains("Friday"));
         assertEquals("Incorrect option", "Friday", dropdownPage.getSelectedOptionText());
         assertEquals("Option selected incorrect!", "Texas", dropdownPage.getFirstOption());
-        // assertEquals("Option selected incorrect!", "Washington", dropdownPage.getLastOption());
     }
 }
