@@ -17,13 +17,9 @@ public class BaseTests {
 
     @BeforeClass
     public void setUp(){
-        // String projectRoot = System.getProperty("user.dir") + "\\javadriver_java";
-        // System.setProperty("webdriver.chrome.driver", projectRoot + "\\resources\\chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
-
         driver = new ChromeDriver();
-        
-        
+        driver.manage().window().maximize();
     }
 
     @BeforeMethod
