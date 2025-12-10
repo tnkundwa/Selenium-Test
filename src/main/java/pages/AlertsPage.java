@@ -1,7 +1,11 @@
 package pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AlertsPage {
     private WebDriver driver;
@@ -17,6 +21,8 @@ public class AlertsPage {
 
     public String getAlertText(){
         clickButton(1);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.alertIsPresent());
         return driver.switchTo().alert().getText();
     }
 
@@ -29,6 +35,8 @@ public class AlertsPage {
     }
     public void cancelAlert(){
         clickButton(2);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.alertIsPresent());
         driver.switchTo().alert().dismiss();
     }
 }
